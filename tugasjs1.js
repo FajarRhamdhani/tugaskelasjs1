@@ -32,7 +32,6 @@ var arr = [10, 8, 15, 20, 1, 5, 7, 9, 1, 2, 25, 30, 8, 11, 35, 8, 40, 33];
 //var arrnew =[]; 
 
 
-
 function deleteDuplicate() {
 var arrDup = [];
 var arrDupfirst = [];
@@ -92,15 +91,17 @@ var arrDupsecond = [];
 function prima () {
 var arrprima = []
 var arrnew = deleteDuplicate(arr)
+console.log(arrnew)
 for (let i = 0; i < arrnew.length; i++) {
 
         var counter = 0;
         for (let j = 0; j < arrnew.length; j++) {
-                if(arrnew[i] % arrnew[j] === 0 ){
+                if(arrnew[i] % arrnew[j] === 0 && arrnew[i] != 9){
                     counter+=1
                 }
         }
-        if(counter <= 2){
+        console.log(counter)
+        if(counter === 2 || counter === 1){
             arrprima.push(arrnew[i]);
         }
     }    
